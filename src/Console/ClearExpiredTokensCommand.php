@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace App\Console;
+namespace Zemkog\OAuth2ServerBundle\Console;
 
-use App\Entity\AccessTokenEntity;
-use App\Entity\RefreshTokenEntity;
-use App\Repository\AccessTokenRepository;
+use Zemkog\OAuth2ServerBundle\Entity\AccessTokenEntity;
+use Zemkog\OAuth2ServerBundle\Entity\RefreshTokenEntity;
+use Zemkog\OAuth2ServerBundle\Repository\AccessTokenRepository;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Exception\ORMException;
 use Doctrine\ORM\OptimisticLockException;

@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Middleware;
+namespace Zemkog\OAuth2ServerBundle\Middleware;
 
 use League\OAuth2\Server\Exception\OAuthServerException;
 use League\OAuth2\Server\ResourceServer;

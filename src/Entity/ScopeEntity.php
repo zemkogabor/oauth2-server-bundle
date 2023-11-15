@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Entity;
+namespace Zemkog\OAuth2ServerBundle\Entity;
 
 use League\OAuth2\Server\Entities\ScopeEntityInterface;
 use League\OAuth2\Server\Entities\Traits\EntityTrait;

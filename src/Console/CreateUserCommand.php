@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace App\Console;
+namespace Zemkog\OAuth2ServerBundle\Console;
 
-use App\Entity\UserEntity;
+use Zemkog\OAuth2ServerBundle\Entity\UserEntity;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Exception\ORMException;
 use Doctrine\ORM\OptimisticLockException;

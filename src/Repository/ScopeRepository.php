@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace App\Repository;
+namespace Zemkog\OAuth2ServerBundle\Repository;
 
-use App\Entity\ScopeEntity;
+use Zemkog\OAuth2ServerBundle\Entity\ScopeEntity;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Repositories\ScopeRepositoryInterface;
 use Psr\Log\LoggerInterface;

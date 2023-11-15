@@ -2,12 +2,12 @@
 
 declare(strict_types = 1);
 
-namespace App\Controller;
+namespace Zemkog\OAuth2ServerBundle\Controller;
 
-use App\Repository\AccessTokenRepository;
-use App\Repository\RefreshTokenRepository;
-use App\Repository\ScopeRepository;
-use App\Repository\UserRepository;
+use Zemkog\OAuth2ServerBundle\Repository\AccessTokenRepository;
+use Zemkog\OAuth2ServerBundle\Repository\RefreshTokenRepository;
+use Zemkog\OAuth2ServerBundle\Repository\ScopeRepository;
+use Zemkog\OAuth2ServerBundle\Repository\UserRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Exception\ORMException;
 use Psr\Http\Message\ResponseInterface;

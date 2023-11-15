@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace App\Repository;
+namespace Zemkog\OAuth2ServerBundle\Repository;
 
-use App\Entity\ClientEntity;
+use Zemkog\OAuth2ServerBundle\Entity\ClientEntity;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Mapping\ClassMetadata;

@@ -1,8 +1,9 @@
 {
   "name": "zemkogabor/oauth2-server-bundle",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "license": "MIT",
   "autoload": {
-    "psr-4": {"App\\": "src/"}
+    "psr-4": {"Zemkog\\\\OAauth2ServerBundle\\\\": "src/"}
   },
   "config": {
     "platform": {

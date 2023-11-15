@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace App\Entity;
+namespace Zemkog\OAuth2ServerBundle\Entity;
 
-use App\Repository\AccessTokenRepository;
+use Zemkog\OAuth2ServerBundle\Repository\AccessTokenRepository;
 use DateTimeImmutable;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\EntityManager;

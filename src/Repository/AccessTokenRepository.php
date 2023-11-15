@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace App\Repository;
+namespace Zemkog\OAuth2ServerBundle\Repository;
 
-use App\Entity\AccessTokenEntity;
+use Zemkog\OAuth2ServerBundle\Entity\AccessTokenEntity;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Exception\ORMException;
