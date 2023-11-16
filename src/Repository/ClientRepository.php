@@ -19,7 +19,7 @@ class ClientRepository extends EntityRepository implements ClientRepositoryInter
 {
     private ClientEntity|null $_clientEntity;
 
-    public function __construct(protected EntityManager $em, protected LoggerInterface $logger,)
+    public function __construct(protected EntityManager $em, protected LoggerInterface $logger)
     {
         parent::__construct($em, new ClassMetadata(ClientEntity::class));
     }

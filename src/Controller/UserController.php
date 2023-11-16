@@ -19,14 +19,13 @@ class UserController
 {
     public const REQUEST_ATTRIBUTE_OAUTH_USER_ID = 'oauth_user_id';
     public const REQUEST_ATTRIBUTE_OAUTH_CLIENT_ID = 'oauth_client_id';
-    public const REQUEST_ATTRIBUTE_OAUTH_SCOPES= 'oauth_scopes';
-    public const REQUEST_ATTRIBUTE_OAUTH_ACCESS_TOKEN_ID= 'oauth_access_token_id';
+    public const REQUEST_ATTRIBUTE_OAUTH_SCOPES = 'oauth_scopes';
+    public const REQUEST_ATTRIBUTE_OAUTH_ACCESS_TOKEN_ID = 'oauth_access_token_id';
 
     public function __construct(
         protected EntityManager $em,
         protected LoggerInterface $logger
-    )
-    {
+    ) {
     }
 
     /**

@@ -15,8 +15,7 @@ class AccessTokenController
     public function __construct(
         protected AuthorizationServer $authorizationServer,
         protected LoggerInterface $logger
-    )
-    {
+    ) {
     }
 
     /**

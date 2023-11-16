@@ -61,8 +61,7 @@ class AccessTokenEntity implements AccessTokenEntityInterface
 
     public function __construct(
         protected EntityManager $em
-    )
-    {
+    ) {
     }
 
     public function getExpiryDateTime(): DateTimeImmutable
