@@ -40,17 +40,17 @@ final class CreateUserCommand extends Command
         $name = $input->getArgument('name');
         $password = $input->getArgument('password');
 
-        $client = new UserEntity();
-        $client->setEmail($email);
-        $client->setName($name);
-        $client->setPassword($password);
+        $user = new UserEntity();
+        $user->setEmail($email);
+        $user->setName($name);
+        $user->setPassword($password);
 
-        $this->entityManager->persist($client);
+        $this->entityManager->persist($user);
         $this->entityManager->flush();
 
         $output->writeln('<info>User created</info>');
-        $output->writeln('Email: ' . $client->getEmail());
-        $output->writeln('Name: ' . $client->getName());
+        $output->writeln('Email: ' . $user->getEmail());
+        $output->writeln('Name: ' . $user->getName());
         $output->writeln('Password: ***');
 
         return Command::SUCCESS;

@@ -6,6 +6,7 @@ namespace Zemkog\OAuth2ServerBundle\Controller;
 
 use League\OAuth2\Server\AuthorizationServer;
 use League\OAuth2\Server\Exception\OAuthServerException;
+use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Log\LoggerInterface;
 use Slim\Http\Response;
@@ -23,7 +24,7 @@ class AccessTokenController
      * @param Response $response
      * @return Response
      */
-    public function actionAccessToken(ServerRequestInterface $request, Response $response): Response
+    public function actionAccessToken(ServerRequestInterface $request, Response $response): ResponseInterface
     {
         try {
             // Try to respond to the access token request

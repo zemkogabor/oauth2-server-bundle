@@ -6,9 +6,9 @@ namespace Zemkog\OAuth2ServerBundle\Middleware;
 
 use League\OAuth2\Server\Exception\OAuthServerException;
 use League\OAuth2\Server\ResourceServer;
+use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Slim\Http\Response;
 
 class ResourceServerMiddleware
 {
@@ -19,7 +19,7 @@ class ResourceServerMiddleware
         $this->server = $server;
     }
 
-    public function __invoke(ServerRequestInterface $request, RequestHandlerInterface $handler): Response
+    public function __invoke(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         $response = $handler->handle($request);
 

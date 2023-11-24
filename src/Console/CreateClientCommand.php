@@ -51,6 +51,8 @@ final class CreateClientCommand extends Command
         if ($secret !== null) {
             $client->setSecret($secret);
             $client->setIsconfidential(true);
+        } else {
+            $client->setIsconfidential(false);
         }
 
         $this->entityManager->persist($client);

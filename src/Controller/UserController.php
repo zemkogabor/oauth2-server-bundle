@@ -10,7 +10,6 @@ use Zemkog\OAuth2ServerBundle\Repository\ScopeRepository;
 use Zemkog\OAuth2ServerBundle\Repository\UserRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Exception\ORMException;
-use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Log\LoggerInterface;
 use Slim\Http\Response;
@@ -31,7 +30,7 @@ class UserController
     /**
      * @param ServerRequestInterface $request
      * @param Response $response
-     * @return ResponseInterface
+     * @return Response
      */
     public function actionActive(ServerRequestInterface $request, Response $response): Response
     {
@@ -60,7 +59,7 @@ class UserController
     /**
      * @param ServerRequestInterface $request
      * @param Response $response
-     * @return ResponseInterface
+     * @return Response
      * @throws ORMException
      */
     public function actionLogout(ServerRequestInterface $request, Response $response): Response
@@ -69,12 +68,10 @@ class UserController
         $accessTokenRepository = new AccessTokenRepository($this->em, $this->logger);
         $tokenId = $request->getAttribute(static::REQUEST_ATTRIBUTE_OAUTH_ACCESS_TOKEN_ID);
         $accessTokenRepository->revokeAccessToken($tokenId);
-        $accessToken = $accessTokenRepository->findOneBy(['token' => $tokenId]);
-        $accessToken->setIsRevoke(true);
 
         // Related refresh tokens must also be deleted.
         $refreshTokenRepository = new RefreshTokenRepository($this->em, $this->logger);
-        $refreshToken = $refreshTokenRepository->findOneBy(['accessToken' => $accessToken]);
+        $refreshToken = $refreshTokenRepository->findOneBy(['accessToken' => $accessTokenRepository->findOneBy(['token' => $tokenId])]);
         $refreshTokenRepository->revokeRefreshToken($refreshToken->getIdentifier());
 
         return $response;
